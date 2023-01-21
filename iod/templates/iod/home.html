@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-
+<div class="home-container">
+    <div>
+        <h3>All Class Rooms</h3>
+        <hr>
+        {% for room in rooms %}
+            <div>
+                <a href="{% url 'classroom' room.id %}">{{ room.id }} > {{ room.classroom }}</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 </body>
 </html>
